@@ -1,3 +1,5 @@
+//URL:https://git.heroku.com/intense-badlands-48538.git
+//or run "Heroku open"
 const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
@@ -52,6 +54,13 @@ app.get('/', (req, res) => {
 app.get('/about', (req, res) => {
   res.render('about.hbs', {
     pageTitle: 'About Page'
+    //currentYear: new Date().getFullYear()
+  });
+});
+
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects'
     //currentYear: new Date().getFullYear()
   });
 });
